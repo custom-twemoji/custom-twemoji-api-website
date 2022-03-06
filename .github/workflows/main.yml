@@ -32,10 +32,13 @@ jobs:
       # This triggers `gatsby build` script in "package.json"
       - run: npm run build
       # 4. Deploy the gatsby build to Netlify
+      - name: Set short SHA
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
       - uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           # 5. "gatsby build" creates "public" folder, which is what we are deploying
-          args: deploy --dir 'public' --message '${{ github.ref_name }}@${GITHUB_SHA::7} ${{ github.event.head_commit.message }}' --prod
+          args: deploy --dir 'public' --message '${{ github.ref_name }}@${{ steps.vars.outputs.sha_short }} ${{ github.event.head_commit.message }}' --prod
