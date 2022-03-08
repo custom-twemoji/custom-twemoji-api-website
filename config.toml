@@ -1,5 +1,5 @@
-baseURL = "https://custom-twemoji.github.io/custom-twemoji-api-website/"
-title = "Custom Twemoji API"
+baseURL = "https://customtwemoji.com/"
+title = "Custom Twemoji API Docs"
 enableRobotsTXT = true
 # this example loads the theme as hugo module
 # comment out line below, and uncomment the line after it if you prefer to load the theme normally
