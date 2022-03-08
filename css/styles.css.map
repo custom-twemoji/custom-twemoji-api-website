@@ -4,7 +4,7 @@
 	"sourceRoot": "/home/runner/work/custom-twemoji-api-website/custom-twemoji-api-website",
 	"sources": [
 		"/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/main.sass",
-		"assets/sass/_variables.sass",
+		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_variables.sass",
 		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_base.sass",
 		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_nav.sass",
 		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_components.sass",
