@@ -28,10 +28,10 @@ codeLineNumbers = false
   name = "GitHub"
   iconLight = "images/GitHubMarkLight.svg"
   iconDark = "images/GitHubMarkDark.svg"
-  url = "https://github.com/onweru/compose/"
+  url = "https://github.com/custom-twemoji/custom-twemoji-api"
 
 # optional
-# attribution. Feel free to delete this
+# copyright/attribution. Feel free to delete this
 [author]
-  name = "Weru"
-  url = "https://neuralvibes.com/author/"
+  name = "Blake Gearin"
+  url = "https://blakegearin.com"
