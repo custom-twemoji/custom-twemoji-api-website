@@ -8,26 +8,20 @@ fileLink = "content/projects.csv"
 title = "Projects"
 
 +++
-{{< block "grid-2" >}}
+{{< block "grid-2 mt-2" >}}
 {{< column >}}
 
-# Custom Twemoji API
+# Custom Twemoji API Docs
 
-Compose is a lean `Hugo` domentation theme, inspired by [forestry.io](https://forestry.io/docs/welcome/).
+Learn how to build your own [Twemojis](https://twemoji.twitter.com/).
 
-{{< tip "warning" >}}
-Feel free to open a [PR](https://github.com/onweru/compose/pulls), raise an [issue](https://github.com/onweru/compose/issues/new/choose "Open a Github Issue")(s) or request new feature(s). {{< /tip >}}
-
-{{< tip >}}
-You can generate diagrams, flowcharts, and piecharts from text in a similar manner as markdown using [mermaid](./docs/compose/mermaid/).
-
-Or, [generate graphs, charts](docs/compose/graphs-charts-tables/#show-a-pie-doughnut--bar-chart-at-once) and tables from a csv, ~~or a json~~ file.
-{{< /tip >}}
-
-{{< button "docs/compose/" "Read the Docs" >}}{{< button "https://github.com/onweru/compose" "Download Theme" >}}
+{{< button "docs" "Read the Docs" >}}{{< button "https://customtwemojiapi.com" "Go to the API" >}}
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/scribble.jpg)
+<img
+  src="/images/home-slideshow.gif"
+  alt="slideshow of example custom Twemojis"
+  style="height: 600px">
 {{< /column >}}
 {{< /block >}}

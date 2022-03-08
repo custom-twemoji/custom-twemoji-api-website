@@ -1,28 +1,39 @@
-mainSections = ["posts"] # use it for blog page section
+# use it for blog page section
+mainSections = ["posts"]
+
 # use the setting below to set multiple docs directories.
 # docSections = ["docs", "tutorials"]
 
-uniqueHomePage = true # change to false to add sidebar to homepage
+# change to false to add sidebar to homepage
+uniqueHomePage = true
 
 repo = "https://github.com/onweru/compose"
 
 time_format_blog = "Monday, January 02, 2006"
 time_format_default = "January 2, 2006"
-enableDarkMode = true # set to false to disable darkmode by default # user will still have the option to use dark mode
 
-# sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
+# set to false to disable darkmode by default
+# user will still have the option to use dark mode
+enableDarkMode = true
+
+
+# sets the maximum number of lines per codeblock
+# the codeblock will however be scrollable and expandable
 codeMaxLines = 7
 
-# disable showing line numbers by default. Switch to `true` if you'd rather have them on.
+# disable showing line numbers by default
+# switch to `true` if you'd rather have them on
 codeLineNumbers = false
 
-# By default the template will look for icons under the icons directory. In some situations you might wanna change that. edit the line below
+# by default the template will look for icons under the icons directory
+# in some situations you might wanna change that.
+# edit the line below
 # iconsPath = 'icons/'
 
 # Site logo
 [logo]
-  lightMode = "images/compose.svg"
-  darkMode = "images/compose-light.svg"
+  lightMode = "images/light-logo.svg"
+  darkMode = "images/dark-logo.svg"
 
 [source]
   name = "GitHub"
@@ -30,8 +41,8 @@ codeLineNumbers = false
   iconDark = "images/GitHubMarkDark.svg"
   url = "https://github.com/custom-twemoji/custom-twemoji-api"
 
-# optional
-# copyright/attribution. Feel free to delete this
+# Copyright and attribution
 [author]
   name = "Blake Gearin"
   url = "https://blakegearin.com"
+  startYear = 2021
