@@ -22,6 +22,6 @@ Learn how to build your own [Twemojis](https://twemoji.twitter.com/).
 <img
   src="/images/home-slideshow.gif"
   alt="slideshow of example custom Twemojis"
-  style="height: 600px">
+  style="max-height: 600px;">
 {{< /column >}}
 {{< /block >}}
