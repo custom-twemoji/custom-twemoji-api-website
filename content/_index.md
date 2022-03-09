@@ -6,8 +6,8 @@ colors = ["#627c62", "#11819b", "#ef7f1a", "#4e1154"]
 columnTitles = ["Section", "Status", "Author"]
 fileLink = "content/projects.csv"
 title = "Projects"
-
 +++
+
 {{< block "grid-2 mt-2" >}}
 {{< column >}}
 
@@ -19,9 +19,8 @@ Learn how to build your own [Twemojis](https://twemoji.twitter.com/).
 {{< /column >}}
 
 {{< column >}}
-<img
-  src="/images/home-slideshow.gif"
-  alt="slideshow of example custom Twemojis"
-  style="max-height: 600px;">
+
+{{< svg "/images/home-slideshow.svg" >}}
+
 {{< /column >}}
 {{< /block >}}
