@@ -11,7 +11,7 @@ title = "Projects"
 {{< block "grid-2 mt-2" >}}
 {{< column >}}
 
-# Custom Twemoji API Docs
+# Custom Twemoji API
 
 Learn how to build your own [Twemojis](https://twemoji.twitter.com/).
 
