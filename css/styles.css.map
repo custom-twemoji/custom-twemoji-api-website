@@ -3,15 +3,15 @@
 	"file": "styles.css",
 	"sourceRoot": "/home/runner/work/custom-twemoji-api-website/custom-twemoji-api-website",
 	"sources": [
-		"/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/main.sass",
+		"themes/compose/assets/sass/main.sass",
 		"assets/sass/_variables.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_base.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_nav.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_components.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_utils.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_syntax.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_fonts.sass",
-		"../../../../../tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/onweru/compose@v0.0.0-20220201011928-fa302c191e1e/assets/sass/_chart.sass"
+		"themes/compose/assets/sass/_base.sass",
+		"themes/compose/assets/sass/_nav.sass",
+		"themes/compose/assets/sass/_components.sass",
+		"themes/compose/assets/sass/_utils.sass",
+		"themes/compose/assets/sass/_syntax.sass",
+		"themes/compose/assets/sass/_fonts.sass",
+		"themes/compose/assets/sass/_chart.sass"
 	],
 	"sourcesContent": [
 		"\nhtml {\n  --infoIcon: url('https://customtwemoji.com/icons/info.svg');\n  --sunIcon: url('https://customtwemoji.com/icons/sun.svg');\n  --moonIcon: url('https://customtwemoji.com/icons/moon.svg');\n  --nextIcon: url('https://customtwemoji.com/icons/next.svg'); }\n@import \"variables\";\n@import \"base\";\n@import \"nav\";\n@import \"components\";\n@import \"utils\";\n@import \"syntax\";\n@import \"fonts\";\n@import \"chart\";\n",
