@@ -32,13 +32,13 @@ codeLineNumbers = false
 
 # Site logo
 [logo]
-  lightMode = "images/light-logo.svg"
-  darkMode = "images/dark-logo.svg"
+  lightMode = "images/logo-black.svg"
+  darkMode = "images/logo-white.svg"
 
 [source]
   name = "GitHub"
-  iconLight = "images/GitHubMarkLight.svg"
-  iconDark = "images/GitHubMarkDark.svg"
+  iconLight = "images/github-black.svg"
+  iconDark = "images/github-white.svg"
   url = "https://github.com/custom-twemoji/custom-twemoji-api"
 
 # Copyright and attribution
