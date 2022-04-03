@@ -1,0 +1,6 @@
+when `output=json`,[Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64)
+when `output=image`,MIME type of `image/png`
+`size`,128 (ideal for Slack)
+`padding`,0
+`renderer` when `output=json` or `output=download`,imagemagick
+`renderer` when `output=image`,canvg

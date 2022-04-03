@@ -1,0 +1,4 @@
+when `output=json`,XML
+when `output=image`,`image/svg+xml`
+`size`,100%
+`padding`,N/A

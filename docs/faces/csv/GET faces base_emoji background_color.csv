@@ -1,0 +1,4 @@
+[HTML color names](https://www.w3schools.com/colors/colors_hex.asp),yellow
+escaped hexadecimal values,`#bbbbbb` escaped is `%23bbbbbb`
+escaped RGB/RGBA values,`rgb(100% 0% 0%)` escaped is `rgb%28100%25%200%25%200%25%29`
+escaped HSL/HSLA values,`hsl(120 50% 50%)` escaped is `hsl%28120%2050%25%2050%25%29`
