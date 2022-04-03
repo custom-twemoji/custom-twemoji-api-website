@@ -34,18 +34,45 @@
   {{- end }}
   <table id="chartTable">
     <thead>
-      {{- range $index, $title := $data.columnTitles }}
-      <th onclick="w3.sortHTML('#chartTable', '.row', 'td:nth-child({{ add $index 1 }})')">{{ $title }} {{ partial "sprite" (dict "icon" "sort") . }}</th>
-      {{- end }}
+      {{- range $index, $titleEntry := $data.columnTitles }}
+        {{ $type := (printf "%T" $titleEntry) }}
+        {{ if eq $type "string" }}
+          <th
+            onclick="w3.sortHTML('#chartTable', '.row', 'td:nth-child({{ add $index 1 }})')"
+          >
+            {{ $titleEntry }} {{ partial "sprite" (dict "icon" "sort") . }}
+          </th>
+        {{ else }}
+          {{- $title := index ($titleEntry) 0 }}
+          {{- $textAlign := index ($titleEntry) 1 }}
+          <th
+            style="text-align: {{ $textAlign }};"
+            onclick="w3.sortHTML('#chartTable', '.row', 'td:nth-child({{ add $index 1 }})')"
+          >
+            {{ $title }} {{ partial "sprite" (dict "icon" "sort") . }}
+          </th>
+        {{ end }}
+      {{ end }}
     </thead>
 
     {{- range $dataFile }}
       {{- $entry := . }}
-    <tr class="row">
-      {{- range $index, $_ := $data.columnTitles }}
-      <td>{{ index $entry $index }}</td>
-      {{- end }}
-    </tr>
+      <tr class="row">
+        {{- range $index, $titleEntry := $data.columnTitles }}
+          {{ $type := (printf "%T" $titleEntry) }}
+          {{ if eq $type "string" }}
+            <td>
+              {{ index $entry $index | markdownify}}
+            </td>
+          {{ else }}
+            {{- $title := index ($titleEntry) 0 }}
+            {{- $textAlign := index ($titleEntry) 1 }}
+            <td style="text-align: {{ $textAlign }};">
+              {{ index $entry $index | markdownify}}
+            </td>
+          {{ end }}
+        {{- end }}
+      </tr>
     {{- end }}
   </table>
 </div>

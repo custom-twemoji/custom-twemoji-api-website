@@ -12,5 +12,8 @@ enableGitInfo = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[params]
+  customCSS = ["/css/custom.css"]
+
 [outputs]
   home = ["HTML", "RSS","JSON"]

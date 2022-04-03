@@ -1,0 +1,18 @@
+`base_emoji`,✅,String,none
+`head`,❌,String,base emoji
+`cheeks`,❌,String,base emoji
+`mouth`,❌,String,base emoji
+`nose`,❌,String,base emoji
+`eyes`,❌,String,base emoji
+`eyewear`,❌,String,base emoji
+`headwear`,❌,String,base emoji
+`other`,❌,String,base emoji
+`order`,❌,String,"head,cheeks,mouth,nose,eyes,eyewear,headwear,other"
+`output`,❌,String,JSON
+`file_format`,❌,String,SVG
+`renderer`,❌,String,N/A due to SVG file format
+`size`,❌,Integer,N/A due to SVG file format
+`padding`,❌,Integer,0
+`background_color`,❌,String,transparent
+`filename`,❌,String,key-value pairs
+`twemoji_version`,❌,String,13.1.0

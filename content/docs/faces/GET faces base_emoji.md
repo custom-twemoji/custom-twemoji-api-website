@@ -1,14 +1,34 @@
 +++
-title = "GET /faces/{emoji}"
+title = "GET /faces/{base_emoji}"
 weight = 2
-[dataset2]
-  fileLink = "content/docs/faces/GET faces emoji.csv"
-  columnTitles = ["Name", "Required", "Type", "Default"]
+[arguments]
+  fileLink = "content/docs/faces/csv/GET faces base_emoji arguments.csv"
+  columnTitles = [
+    "Name",
+    ["Required", "center"],
+    "Type",
+    "Default"
+  ]
   # number of column the chart(s) and graph should be drawn from
   # can be overridden directly via shortcode parameter
   # it's therefore optional
   baseChartOn = 2
-  title = "GET /faces/{emoji} arguments"
+  title = "GET /faces/{base_emoji} arguments"
+[file_format_svg]
+  fileLink = "content/docs/faces/csv/GET faces base_emoji file_format=svg.csv"
+  columnTitles = ["Argument", "Default"]
+  baseChartOn = 2
+  title = "Defaults for file_format=svg"
+[file_format_png]
+  fileLink = "content/docs/faces/csv/GET faces base_emoji file_format=png.csv"
+  columnTitles = ["Argument", "Default"]
+  baseChartOn = 2
+  title = "Defaults for file_format=png"
+[background_color]
+  fileLink = "content/docs/faces/csv/GET faces base_emoji background_color.csv"
+  columnTitles = ["Type", "Example"]
+  baseChartOn = 2
+  title = "Accepted formats for background_color"
 +++
 
 Use this endpoint to build a custom Twemoji.
@@ -16,8 +36,115 @@ Use this endpoint to build a custom Twemoji.
 ## Arguments
 
 {{< block >}}
-  {{< chart "dataset2" "table,noFilter" >}}
+  {{< chart "arguments" "table,noFilter" >}}
 {{< /block >}}
+
+### Emoji Formats
+
+Valid emoji formats:
+
+  - glyph: 🙂
+  - case insensitive codepoint: `1f642` or `U+1f642`
+  - number representation: `128578`
+
+### Facial Features
+
+Facial feature are passed in as keys with emojis as their values. Each feature is a layer and the order in which they're stacked impacts what will be seen or hidden in its final visual form.
+
+If you want to specify your own stacking order, pass in the key-value pair `order=manual` anywhere in the request. The stacking will follow the order you pass in parameters, with the first parameter being at the bottom.
+
+**Example:** If you want...
+
+- the eyes of [263a](https://unicode-table.com/en/263A) ☺️
+- the mouth of [2639](https://unicode-table.com/en/2639/) ☹️
+- the eyewear of [1f978](https://unicode-table.com/en/1F978/) 🥸
+- everything else of [1f47f](https://unicode-table.com/en/1F47F/) 👿
+
+Your request will look like this:
+
+```txt
+/v1/faces/1f47f?eyes=263a&mouth=2639&eyewear=1f978
+```
+
+A base emoji is required, but you can exclude any feature by passing in the parameter as `false` or empty:
+
+```txt
+# Head empty, no thoughts
+/v1/faces/1f47f?head=&mouth=2639
+
+# Head false, headless horseman
+/v1/faces/1f47f?head=false&mouth=2639
+```
+
+If you want the eyes to be above the eyewear, add in `order=manual` and move eyes in front of eyewear:
+
+```txt
+/v1/faces/1f47f?mouth=2639&eyewear=1f978&eyes=263a&order=manual
+```
+
+### Output
+
+- JSON (`output=json`)
+  - Main response listed under `data`
+  - Licensing information and `links` are also included
+- image (`output=image`)
+- download (`output=download`)
+  - The default name of the file returned is the emoji described in key-value pairs
+  - The equals signs (`=`) and ampersands (`&`) are replaced with a minus sign (`-`) and these characters `_-_`
+
+    Example Request:
+
+    ```txt
+    /v1/faces/263a?file_format=png&output=download
+    ```
+
+    File returned: `base-263a.png`
+
+  - If you want to name your download file, use the `filename` argument
+
+    Example Request:
+
+    ```txt
+    /v1/faces/263a?file_format=png&output=download&filename=amazing_emoji
+    ```
+
+    File returned: `amazing_emoji.png`
+
+### File Format
+
+File format refers to the type of image that is generated. Changing this argument changes other argument defaults.
+
+#### SVG (`file_format=svg`)
+
+{{< block >}}
+  {{< chart "file_format_svg" "table,noFilter" >}}
+{{< /block >}}
+
+#### PNG (`file_format=png`)
+
+{{< block >}}
+  {{< chart "file_format_png" "table,noFilter" >}}
+{{< /block >}}
+
+### Renderer
+
+When querying for a PNG, a renderer is used. The default is imagemagick, but canvg is also available for browser usage returning content-type `text/html`.
+
+### Background Color
+
+Specify a background color with a string (e.g. `background_color=red`). Formats supported:
+
+{{< block >}}
+  {{< chart "background_color" "table,noFilter" >}}
+{{< /block >}}
+
+### Size
+
+Specify the size of the output in pixels with an integer (e.g. `size=500`). It will always be a square so height and width are equal.
+
+### Padding
+
+Add padding between the emoji and the edge of the output. Specify the number of pixels of the padding with an integer (e.g. `padding=100`). This reduces the size of the emoji, but not the `size` of the output.
 
 ## Example
 

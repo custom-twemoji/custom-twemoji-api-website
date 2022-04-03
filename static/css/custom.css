@@ -1,0 +1,11 @@
+nav ul ul {
+  margin-left: 1rem;
+}
+
+th, td, th:not(:first-child), td:not(:first-child) {
+  padding: 0.4rem 0.7rem;
+}
+
+th svg {
+  margin: 0 !important;
+}

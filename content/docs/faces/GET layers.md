@@ -2,8 +2,13 @@
 title = "GET /faces/layers"
 weight = 2
 [dataset2]
-  fileLink = "content/docs/faces/GET faces layers.csv"
-  columnTitles = ["Name", "Required", "Type", "Default"]
+  fileLink = "content/docs/faces/csv/GET faces layers.csv"
+  columnTitles = [
+    "Name",
+    ["Required", "center"],
+    "Type",
+    "Default"
+  ]
   # number of column the chart(s) and graph should be drawn from
   # can be overridden directly via shortcode parameter
   # it's therefore optional
