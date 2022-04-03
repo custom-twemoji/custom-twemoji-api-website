@@ -4,17 +4,12 @@
   weight = 2
   url = "docs/"
 
-[[main]]
-  name = "Tutorials"
-  weight = 2
-  url = "tutorials/"
-
-[[main]]
-  name = "Example"
-  weight = 3
-  url = "https://docs.neuralvibes.com"
-
 # [[main]]
-#   name = "Blog"
-#   weight = 4
-#   url = "blog/"
+#   name = "Tutorials"
+#   weight = 2
+#   url = "tutorials/"
+
+[[main]]
+  name = "Random Example"
+  weight = 3
+  url = "https://customtwemojiapi.com/v1/faces/random?output=image&file_format=png&size=500"
