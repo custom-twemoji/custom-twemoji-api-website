@@ -23,7 +23,10 @@ Endpoint: <code>{{< param randomEndpoint >}}</code>
 <br><br><br>
 
 {{% center %}}
-<a type="button" class="button" onClick="document.getElementById('random-twemoji').src += '';">
+<a
+  href=""
+  class="button"
+  onClick="document.getElementById('random-twemoji').src += ''; return false;">
   Again 🔄
 </a>
 {{% /center %}}
