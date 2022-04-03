@@ -4,6 +4,33 @@
   {{- partial "head" . }}
 </head>
 <body class="page-{{ .Kind }}" id="pagetop">
+  <div
+    id="cover-spinner"
+    style="
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: var(--loading-background-color);
+      z-index: 99999;
+    ">
+    <div
+      class="lds-ellipsis"
+      style="
+        position: absolute;
+        top: calc(50% - 30px);
+        left: calc(50% - 40px);
+      "
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <header class="nav_header">
     {{- partial "nav" . }}
   </header>
@@ -33,5 +60,14 @@
   {{- partialCached "scripts/bundle" . -}}
   {{- partial "scripts/other" . -}}
   {{ partial "twemoji" . }}
+  <script>
+    window.onload = function(){;
+      setTimeout(
+        () => {
+          document.getElementById('cover-spinner').style.display = 'none'
+        }, 250
+      );
+    }
+  </script>
 </body>
 </html>

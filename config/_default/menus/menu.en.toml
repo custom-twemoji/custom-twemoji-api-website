@@ -6,6 +6,6 @@
   url = "docs/"
 
 [[main]]
-  name = "Random Example"
+  name = "Random Face"
   weight = 2
-  url = "random-example/"
+  url = "random-face/"

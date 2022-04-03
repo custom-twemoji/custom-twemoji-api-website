@@ -1,5 +1,5 @@
 ---
-title: Random Example
+title: Random Face
 weight: 1
 ---
 
@@ -16,17 +16,22 @@ Endpoint: <code>{{< param randomEndpoint >}}</code>
   width="100%"
   height="500px"
   frameBorder="0"
+  onload="document.getElementById('cover-spinner').style.display = 'none'"
 >
   Browser not compatible.
 </iframe>
 
-<br><br><br>
+<br><br>
 
 {{% center %}}
 <a
   href=""
   class="button"
-  onClick="document.getElementById('random-twemoji').src += ''; return false;">
+  onClick="
+    document.getElementById('cover-spinner').style.display = 'block';
+    document.getElementById('random-twemoji').src += '';
+    return false;
+  ">
   Again 🔄
 </a>
 {{% /center %}}
