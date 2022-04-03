@@ -12,4 +12,3 @@ Surprised that it doesn't have a left sidebar menu? Worry not; just [follow this
 {{< button "./example" "Tutorials" "mb-1" >}}
 
 {{< button "../docs/" "Back to docs" >}}
-

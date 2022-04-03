@@ -1,15 +1,11 @@
-#  menu items
+#  Menu items in navbar
+
 [[main]]
   name = "Docs"
   weight = 2
   url = "docs/"
 
-# [[main]]
-#   name = "Tutorials"
-#   weight = 2
-#   url = "tutorials/"
-
 [[main]]
   name = "Random Example"
-  weight = 3
-  url = "https://customtwemojiapi.com/v1/faces/random?output=image&file_format=png&size=500"
+  weight = 2
+  url = "random-example/"
