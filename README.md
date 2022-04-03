@@ -13,11 +13,6 @@
 </p>
 
 [![GitHub Pages](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml)
-
-## License
-
-- Code licensed under the [Apache License](LICENSE)
-- Graphics licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- Twemoji licensing can be found on [Twitter](https://twemoji.twitter.com)
+![License](https://img.shields.io/github/license/custom-twemoji/custom-twemoji-api-website)
 
 Not affiliated with Twitter Inc. or any of their affiliations
