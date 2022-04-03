@@ -1,3 +1,5 @@
+github.com/jakejarvis/hugo-mod-twemoji v0.3.0 h1:jfd+zYe2EyQhc40FWNqK1x+/YbCefw6ZuMpUcDlSbcc=
+github.com/jakejarvis/hugo-mod-twemoji v0.3.0/go.mod h1:3A+EjJ50vQEkmnEfhEY3RqPXozuWudsGwHx2UAUn9tA=
 github.com/onweru/compose v0.0.0-20201006150935-3c1a2b1a5808 h1:6eVMm+cuEWeCodoHVzfjPc1+BOJMvm7boxrsXSMcbBg=
 github.com/onweru/compose v0.0.0-20201006150935-3c1a2b1a5808/go.mod h1:tf1kQIBUcwJ/3mRFU5eiMrMvsDScVTK2IEFsZE3hZOc=
 github.com/onweru/compose v0.0.0-20201008112336-b33efbb800d7 h1:tAyTSeyByfv2gPaqUrYi0kk0Z9jLTkAz24iSqLsotaA=
@@ -206,3 +208,4 @@ github.com/onweru/compose v0.0.0-20220201011553-09a8e1b4a4c3 h1:+0s7j6cuw2l2fedq
 github.com/onweru/compose v0.0.0-20220201011553-09a8e1b4a4c3/go.mod h1:tf1kQIBUcwJ/3mRFU5eiMrMvsDScVTK2IEFsZE3hZOc=
 github.com/onweru/compose v0.0.0-20220201011928-fa302c191e1e h1:Z8SqJWScAE3rr9I9OYD0miHYPZEVewWwYCCnMik2+HQ=
 github.com/onweru/compose v0.0.0-20220201011928-fa302c191e1e/go.mod h1:tf1kQIBUcwJ/3mRFU5eiMrMvsDScVTK2IEFsZE3hZOc=
+github.com/twitter/twemoji v13.1.0+incompatible/go.mod h1:06L6PdKuWDx/Yh6s4B7yGkAeBmWZzbFZgfNnWlJPPYM=

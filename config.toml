@@ -14,6 +14,11 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
   customCSS = ["/css/custom.css"]
+  randomEndpoint = "/v1/faces/random?output=image&file_format=svg&background_color=transparent"
 
 [outputs]
   home = ["HTML", "RSS","JSON"]
+
+[module]
+[[module.imports]]
+  path = "github.com/jakejarvis/hugo-mod-twemoji"

@@ -4,14 +4,14 @@ weight: 1
 ---
 
 {{% center %}}
-Endpoint: `/v1/faces/random?output=image&file_format=svg&background_color=transparent`
+Endpoint: <code>{{< param randomEndpoint >}}</code>
 {{% /center %}}
 
-<br>
+<br><br>
 
 <iframe
   id="random-twemoji"
-  src="https://customtwemojiapi.com/v1/faces/random?output=image&file_format=svg&background_color=transparent"
+  src="https://customtwemojiapi.com{{< param randomEndpoint >}}"
   title="Random Twemoji from Custom Twmoji API"
   width="100%"
   height="500px"
@@ -19,3 +19,11 @@ Endpoint: `/v1/faces/random?output=image&file_format=svg&background_color=transp
 >
   Browser not compatible.
 </iframe>
+
+<br><br><br>
+
+{{% center %}}
+<a type="button" class="button" onClick="document.getElementById('random-twemoji').src += '';">
+  Again 🔄
+</a>
+{{% /center %}}
