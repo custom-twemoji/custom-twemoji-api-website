@@ -1,5 +1,5 @@
 ---
-title: Running Locally
+title: 💻&nbsp;&nbsp;Running Locally
 weight: 2
 ---
 

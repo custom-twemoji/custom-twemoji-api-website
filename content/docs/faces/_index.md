@@ -1,5 +1,5 @@
 ---
-title: 🙂 Faces
+title: 🙂&nbsp;&nbsp;Faces Endpoints
 weight: 1
 ---
 

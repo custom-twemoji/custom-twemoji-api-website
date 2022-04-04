@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: 🔑&nbsp;&nbsp;Getting Started
 weight: 1
 ---
 

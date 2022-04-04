@@ -1,4 +1,4 @@
 {{- $style := .Get 0 -}}
-<div {{ with $style }}style="text-align: center; {{ . | safeCSS }}"{{ end }}>
+<div style='text-align: center;{{- if $style -}}{{ printf " %s" $style | safeCSS }}{{ end }}'>
   {{- .Inner -}}
 </div>

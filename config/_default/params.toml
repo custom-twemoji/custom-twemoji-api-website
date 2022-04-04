@@ -39,7 +39,7 @@ codeLineNumbers = false
   name = "GitHub"
   iconLight = "images/github-black.svg"
   iconDark = "images/github-white.svg"
-  url = "https://github.com/custom-twemoji/custom-twemoji-api"
+  url = "https://github.com/custom-twemoji"
 
 # Copyright and attribution
 [author]

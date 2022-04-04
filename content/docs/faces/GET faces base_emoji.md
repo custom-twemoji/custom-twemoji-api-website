@@ -1,5 +1,5 @@
 +++
-title = "GET /faces/{base_emoji}"
+title = "GET `/faces/{base_emoji}`"
 weight = 2
 [arguments]
   fileLink = "content/docs/faces/csv/GET faces base_emoji arguments.csv"

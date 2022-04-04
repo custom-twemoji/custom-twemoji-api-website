@@ -1,6 +1,6 @@
 ---
-title: Contributing
-weight: 2
+title: ✏️&nbsp;&nbsp;Contributing
+weight: 3
 ---
 
 This project is open for anyone to contribute or raise issues. Before contributing a large change, please [raise an issue](https://github.com/custom-twemoji/custom-twemoji-api/issues/new) first to confirm it fits within the scope of the API.

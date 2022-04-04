@@ -7,15 +7,15 @@
 nav ul ul
   margin-left: 1rem;
 
+aside section section section section
+  margin-left: 2.1rem;
 
 // Table
 th, td, th:not(:first-child), td:not(:first-child)
   padding: 0.4rem 0.7rem;
 
-
 th svg
   margin: 0 !important;
-
 
 // Twemoji
 img.emoji
@@ -24,10 +24,12 @@ img.emoji
   margin: 0 .05em 0 .1em;
   vertical-align: -0.1em;
 
-
 // Loading Spinner
-.nav_header, aside
+.nav_header
   z-index: 9999 !important;
+
+aside
+  z-index: 9998 !important;
 
 
 .lds-ellipsis div
@@ -63,14 +65,12 @@ img.emoji
   100%
     transform: scale(1);
 
-
 @keyframes lds-ellipsis3
   0%
     transform: scale(1);
 
   100%
     transform: scale(0);
-
 
 @keyframes lds-ellipsis2
   0%

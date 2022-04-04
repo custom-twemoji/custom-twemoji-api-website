@@ -1,11 +1,11 @@
 #  Menu items in navbar
 
 [[main]]
-  name = "Docs"
+  name = "📝&nbsp;&nbsp;Docs"
   weight = 2
   url = "docs/"
 
 [[main]]
-  name = "Random Face"
+  name = "🤪&nbsp;&nbsp;Random Face"
   weight = 2
   url = "random-face/"

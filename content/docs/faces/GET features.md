@@ -1,5 +1,5 @@
 +++
-title = "GET /faces/features"
+title = "GET `/faces/features`"
 weight = 2
 [dataset2]
   fileLink = "content/docs/faces/csv/GET faces features.csv"
