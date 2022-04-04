@@ -3,17 +3,16 @@ title = "Custom Twemoji API"
 enableRobotsTXT = true
 
 # edit this if you'ld rather use a fork of this repo
-# theme = ["github.com/onweru/compose"]
+theme = ["github.com/onweru/compose"]
 
 # if you prefer to load the theme normally
-theme = "compose"
+# theme = "compose"
 
 enableGitInfo = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
-  customCSS = ["/css/custom.css"]
   randomEndpoint = "/v1/faces/random?output=image&file_format=svg&background_color=transparent"
 
 [outputs]

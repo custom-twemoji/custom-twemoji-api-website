@@ -16,6 +16,7 @@
       bottom: 0;
       background-color: var(--loading-background-color);
       z-index: 99999;
+      display: none;
     ">
     <div
       class="lds-ellipsis"
@@ -60,14 +61,5 @@
   {{- partialCached "scripts/bundle" . -}}
   {{- partial "scripts/other" . -}}
   {{ partial "twemoji" . }}
-  <script>
-    window.onload = function(){;
-      setTimeout(
-        () => {
-          document.getElementById('cover-spinner').style.display = 'none'
-        }, 250
-      );
-    }
-  </script>
 </body>
 </html>
