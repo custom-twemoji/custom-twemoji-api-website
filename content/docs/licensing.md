@@ -13,6 +13,7 @@ Not affiliated with Twitter Inc. or any of their affiliations
 
 ## Website
 
+- Theme: [Compose](https://github.com/onweru/compose/)
 - Code licensed under the [Apache 2.0](https://github.com/custom-twemoji/custom-twemoji-api-website/blob/main/LICENSE)
 - Twemoji licensing can be found on [Twitter](https://twemoji.twitter.com)
 

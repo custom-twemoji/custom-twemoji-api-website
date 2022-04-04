@@ -1,7 +1,7 @@
 +++
 title = "GET `/faces/features`"
 weight = 2
-[dataset2]
+[arguments]
   fileLink = "content/docs/faces/csv/GET faces features.csv"
   columnTitles = [
     "Name",
@@ -9,9 +9,6 @@ weight = 2
     "Type",
     "Default"
   ]
-  # number of column the chart(s) and graph should be drawn from
-  # can be overridden directly via shortcode parameter
-  # it's therefore optional
   baseChartOn = 2
   title = "GET /faces/features arguments"
 +++
@@ -21,7 +18,7 @@ Use this endpoint to view the layers of Twemojis that are supported as faces ind
 ## Arguments
 
 {{< block >}}
-  {{< chart "dataset2" "table,noFilter" >}}
+  {{< chart "arguments" "table,noFilter" >}}
 {{< /block >}}
 
 ## Example

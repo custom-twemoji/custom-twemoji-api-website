@@ -31,7 +31,7 @@ weight = 2
   title = "Accepted formats for background_color"
 +++
 
-Use this endpoint to build a custom Twemoji.
+Use this endpoint to build a custom Twemoji using one as a base.
 
 ## Arguments
 

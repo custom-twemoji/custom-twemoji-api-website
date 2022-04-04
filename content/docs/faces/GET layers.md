@@ -1,7 +1,7 @@
 +++
 title = "GET `/faces/layers`"
 weight = 2
-[dataset2]
+[arguments]
   fileLink = "content/docs/faces/csv/GET faces layers.csv"
   columnTitles = [
     "Name",
@@ -21,7 +21,7 @@ Use this endpoint to view the features of Twemojis that are supported as faces i
 ## Arguments
 
 {{< block >}}
-  {{< chart "dataset2" "table,noFilter" >}}
+  {{< chart "arguments" "table,noFilter" >}}
 {{< /block >}}
 
 ## Example
