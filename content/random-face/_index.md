@@ -6,14 +6,14 @@ weight: 1
 {{< display-spinner >}}
 
 {{% center %}}
-Endpoint: <code>{{< param randomEndpoint >}}</code>
+Endpoint: <code>{{< param randomFaceEndpoint >}}</code>
 {{% /center %}}
 
 <br><br>
 
 <iframe
   id="random-twemoji"
-  src="https://customtwemojiapi.com{{< param randomEndpoint >}}"
+  src="{{< param productionApi >}}{{< param randomFaceEndpoint >}}"
   title="Random Twemoji from Custom Twmoji API"
   width="100%"
   height="500px"
