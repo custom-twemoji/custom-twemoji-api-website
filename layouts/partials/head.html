@@ -14,12 +14,8 @@
 {{- if in (lower $s) (lower $t) }}
   {{- $t = false }}
 {{- end }}
-<title>
-  {{ if and $t (ne (trim (lower $s) "") (trim (lower $t) "")) }}
-    {{ $t | markdownify }} |
-  {{ end }}
-  {{ $s }}
-</title>
+
+<title>{{ if and $t (ne (trim (lower $s) "") (trim (lower $t) "")) }}{{ $t | markdownify }} | {{ end }}{{ $s }}</title>
 
 {{- partial "opengraph" . }}
 
