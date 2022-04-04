@@ -11,11 +11,16 @@ title = "Projects"
 {{< block "grid-2 mt-2" >}}
 {{< column >}}
 
+{{% center "top: 50%; position: relative; transform: translateY(-50%);" %}}
+
 # Custom Twemoji API
 
 Learn how to build your own [Twemojis](https://twemoji.twitter.com/).
 
-{{< button "docs" "Read the Docs" >}}{{< button "https://customtwemojiapi.com" "Go to the API" >}}
+<p class="button_grid" style="text-align: center; display: inline-grid;">{{< button "docs" "Read the Docs" >}}{{< button "https://github.com/custom-twemoji/custom-twemoji-api" "Go to the API" >}}</p>
+
+{{% /center %}}
+
 {{< /column >}}
 
 {{< column >}}

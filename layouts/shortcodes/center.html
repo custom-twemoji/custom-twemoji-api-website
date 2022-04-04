@@ -1,3 +1,4 @@
-<div style="text-align: center;">
-  {{.Inner}}
+{{- $style := .Get 0 -}}
+<div {{ with $style }}style="text-align: center; {{ . | safeCSS }}"{{ end }}>
+  {{- .Inner -}}
 </div>
