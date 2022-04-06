@@ -6,7 +6,7 @@ weight: 1
 {{< display-spinner >}}
 
 {{% center %}}
-Endpoint: <code>{{< param randomFaceEndpoint >}}</code>
+Endpoint: <code>/v1/faces/random?output=image&file_format=svg&background_color=transparent</code>
 {{% /center %}}
 
 <br>
