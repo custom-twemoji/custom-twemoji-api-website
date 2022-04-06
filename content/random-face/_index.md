@@ -24,21 +24,39 @@ Endpoint: <code>/v1/faces/random?output=image&file_format=svg&background_color=t
 </p>
 
 {{% center %}}
-<p class="button_grid" style="text-align: center; display: inline-grid;"><a
-  href=""
-  class="button"
-  onClick="
-    downloadFaceAsPng(output);
-    return false;
-  ">
-  💾&nbsp;&nbsp;Download PNG
-</a><a
-  href=""
-  class="button"
-  onClick="
-    getRandomFace();
-    return false;
-  ">
-  🔄&nbsp;&nbsp;Generate Another
-</a></p>
+<p>
+  <a
+    href=""
+    class="button secondary"
+    onClick="
+      getRandomFace();
+      return false;
+    ">
+    🔄&nbsp;&nbsp;Generate Another
+  </a>
+</p>
+
+or download this one as a PNG
+
+<p style="text-align: center; display: inline-grid;">
+  <a
+    href=""
+    class="button"
+    onClick="
+      downloadFaceAsPng(2000);
+      return false;
+    ">
+    ✨&nbsp;&nbsp;High Resolution
+  </a>
+  <a
+    href=""
+    class="button primary"
+    style="background-color: var(--theme); "
+    onClick="
+      downloadFaceAsPng();
+      return false;
+    ">
+    #️⃣&nbsp;&nbsp;To Use in Slack
+  </a>
+</p>
 {{% /center %}}

@@ -59,7 +59,7 @@ function getRandomFace() {
   );
 }
 
-function downloadFaceAsPng() {
+function downloadFaceAsPng(size) {
   let output = document.getElementById('output');
   if (output === null) {
     console.error('Output is empty');
@@ -73,6 +73,7 @@ function downloadFaceAsPng() {
   }
 
   let apiEndpoint = `${productionApi}${endpointUrl}&output=download`;
+  if (size) apiEndpoint += `&size=${size}`
   apiEndpoint = apiEndpoint.replace('file_format=svg', 'file_format=png');
 
   downloadURI(apiEndpoint);
