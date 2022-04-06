@@ -6,9 +6,6 @@ var getJSON = function(url, callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      console.log(`xhr`);
-      console.dir(xhr);
-
       callback(null, xhr.response);
     } else {
       callback(status, xhr.response);
@@ -60,6 +57,8 @@ function getRandomFace() {
 }
 
 function downloadFaceAsPng(size) {
+  toggleSpinner(true);
+
   let output = document.getElementById('output');
   if (output === null) {
     console.error('Output is empty');
@@ -77,6 +76,13 @@ function downloadFaceAsPng(size) {
   apiEndpoint = apiEndpoint.replace('file_format=svg', 'file_format=png');
 
   downloadURI(apiEndpoint);
+
+  // Spinner with a hardcoded wait time is better than no loading indicator
+  // No easy way to tell when a file a file can be downloaded: https://stackoverflow.com/questions/1106377/detect-when-a-browser-receives-a-file-download
+  setInterval(
+    () => {toggleSpinner(false)},
+    5000
+  );
 }
 
 window.onload = function() {
