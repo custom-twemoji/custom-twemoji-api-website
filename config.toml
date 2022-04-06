@@ -12,11 +12,6 @@ enableGitInfo = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
-[params]
-  localApi = "http://localhost"
-  productionApi = "https://customtwemojiapi.com"
-  randomFaceEndpoint = "/v1/faces/random?output=image&file_format=svg&background_color=transparent"
-
 [outputs]
   home = ["HTML", "RSS","JSON"]
 

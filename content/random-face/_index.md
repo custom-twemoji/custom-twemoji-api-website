@@ -9,31 +9,36 @@ weight: 1
 Endpoint: <code>{{< param randomFaceEndpoint >}}</code>
 {{% /center %}}
 
-<br><br>
+<br>
 
-<iframe
+<div
   id="random-twemoji"
-  src="{{< param productionApi >}}{{< param randomFaceEndpoint >}}"
-  title="Random Twemoji from Custom Twmoji API"
-  width="100%"
-  height="500px"
-  frameBorder="0"
-  onload="toggleSpinner(false)"
->
-  Browser not compatible.
-</iframe>
+  style="width:100%; height:500px"
+  onload="loadRandomFace();"
+></div>
 
-<br><br>
+<br>
+
+<p style='text-align: center;'>
+  Output: <code id="output"></code>
+</p>
 
 {{% center %}}
-<a
+<p class="button_grid" style="text-align: center; display: inline-grid;"><a
   href=""
   class="button"
   onClick="
-    document.getElementById('cover-spinner').style.display = 'block';
-    document.getElementById('random-twemoji').src += '';
+    downloadFaceAsPng(output);
     return false;
   ">
-  Again 🔄
-</a>
+  💾&nbsp;&nbsp;Download PNG
+</a><a
+  href=""
+  class="button"
+  onClick="
+    getRandomFace();
+    return false;
+  ">
+  🔄&nbsp;&nbsp;Generate Another
+</a></p>
 {{% /center %}}
