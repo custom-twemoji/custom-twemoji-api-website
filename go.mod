@@ -1,4 +1,4 @@
-module compose-exampleSite
+module github.com/custom-twemoji/custom-twemoji-api-website
 
 go 1.15
 
