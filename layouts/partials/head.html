@@ -15,7 +15,9 @@
   {{- $t = false }}
 {{- end }}
 
-<title>{{ if and $t (ne (trim (lower $s) "") (trim (lower $t) "")) }}{{ $t | markdownify }} | {{ end }}{{ $s }}</title>
+<title>
+  {{ if and $t (ne (trim (lower $s) "") (trim (lower $t) "")) }}{{ $t | markdownify | replaceRE "<{1}[/\\w]+>{1}" "" }} | {{ end }}{{ $s }}
+</title>
 
 {{- partial "opengraph" . }}
 
