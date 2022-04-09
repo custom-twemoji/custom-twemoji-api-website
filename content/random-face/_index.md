@@ -56,7 +56,7 @@ or download this one as a PNG
       downloadFaceAsPng();
       return false;
     ">
-    #️⃣&nbsp;&nbsp;To Use in Slack
+    #️⃣&nbsp;&nbsp;Sized for Slack
   </a>
 </p>
 {{% /center %}}
