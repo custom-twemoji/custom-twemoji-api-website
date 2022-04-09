@@ -3,10 +3,16 @@ title = "Custom Twemoji API"
 enableRobotsTXT = true
 
 # edit this if you'ld rather use a fork of this repo
-theme = ["github.com/onweru/compose"]
+# theme = ["github.com/onweru/compose"]
 
 # if you prefer to load the theme normally
 # theme = "compose"
+
+[module]
+[[module.imports]]
+path = "github.com/onweru/compose"
+[[module.imports]]
+path = "github.com/jakejarvis/hugo-mod-twemoji"
 
 enableGitInfo = true
 
@@ -14,7 +20,3 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [outputs]
   home = ["HTML", "RSS","JSON"]
-
-[module]
-[[module.imports]]
-  path = "github.com/jakejarvis/hugo-mod-twemoji"
