@@ -155,7 +155,7 @@ Specify a background color with a string (e.g. `background_color=red`). Formats 
 Request:
 
 ```curl
-curl https://customtwemojiapi.com/v1/faces/1f47f?eyes=263a&mouth=2639&eyewear=1f978
+CUSTOM_TWEMOJI_API=https://customtwemojiapi.com/v1; curl $CUSTOM_TWEMOJI_API/faces/1f47f?eyes=263a&mouth=2639&eyewear=1f978
 ```
 
 Response:

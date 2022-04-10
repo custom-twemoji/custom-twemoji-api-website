@@ -29,7 +29,7 @@ Use this endpoint to view the features of Twemojis that are supported as faces i
 Request:
 
 ```curl
-curl https://customtwemojiapi.com/v1/faces/layers
+CUSTOM_TWEMOJI_API=https://customtwemojiapi.com/v1; curl $CUSTOM_TWEMOJI_API/faces/layers
 ```
 
 Response:

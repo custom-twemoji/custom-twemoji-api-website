@@ -26,7 +26,7 @@ Use this endpoint to view the layers of Twemojis that are supported as faces ind
 Request:
 
 ```curl
-curl https://customtwemojiapi.com/v1/faces/features
+CUSTOM_TWEMOJI_API=https://customtwemojiapi.com/v1; curl $CUSTOM_TWEMOJI_API/faces/features
 ```
 
 Response:

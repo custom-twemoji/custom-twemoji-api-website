@@ -13,7 +13,7 @@ weight = 2
   title = "GET /faces arguments"
 +++
 
-Use this endpoint to find which Twemojis are supported as faces. Knowing whether a Twemoji is supported as a face can help you submit other requests that don't fail.
+Use this endpoint to find which Twemojis are supported as faces. Knowing whether a Twemoji is supported as a face can help in formulating other requests that don't fail.
 
 ## Arguments
 
@@ -26,7 +26,7 @@ Use this endpoint to find which Twemojis are supported as faces. Knowing whether
 Request:
 
 ```curl
-curl https://customtwemojiapi.com/v1/faces
+CUSTOM_TWEMOJI_API=https://customtwemojiapi.com/v1; curl $CUSTOM_TWEMOJI_API/faces
 ```
 
 Response:

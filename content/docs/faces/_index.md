@@ -18,9 +18,11 @@ Faces are a subset of Twemojis supported by the API. To be supported, the Twemoj
 
 ## Labeling
 
-Deciding which feature to label a layer can be subjective, especially with the inclusion of an `other` label. For example, a layer with dimples could be commonly classified as part of the cheeks or the mouth.
+Deciding which feature to label a layer is subjective, especially with the inclusion of an `other` label. For example, a layer with dimples could be commonly classified as part of the cheeks or the mouth.
 
 It's also relevant to consider how the layer looks when combined with other Twemojis. To continue with the same example, if the layer with dimples is often hidden behind other `cheeks` layers when labeled as `mouth`, then it might be better to label it `cheeks` instead so it can be used more.
+
+Layers may also be intentionally separated to create more pieces for mixing and matching. For example, eyebrows may be labeled as `headwear` instead of `eyes` because someone may want to use the eyebrows with another set of eyes, which would not be possible if the eyebrows were grouped with the eyes.
 
 Because of these considerations, features may not be intuitive for every Twemoji you encounter and potentially not consistent when comparing between Twemojis.
 
