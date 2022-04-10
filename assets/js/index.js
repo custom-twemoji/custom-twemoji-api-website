@@ -1,5 +1,3 @@
-console.log('blake');
-
 (function calcNavHeight(){
   const nav = elem('.nav_header');
   const navHeight = nav.offsetHeight + 25;
