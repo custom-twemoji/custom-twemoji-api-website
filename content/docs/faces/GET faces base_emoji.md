@@ -1,6 +1,6 @@
 +++
 title = "GET `/faces/{base_emoji}`"
-weight = 2
+weight = 3
 [arguments]
   fileLink = "content/docs/faces/csv/GET faces base_emoji arguments.csv"
   columnTitles = [
@@ -51,22 +51,24 @@ Valid emoji formats:
 
 Facial feature are passed in as keys with emojis as their values. Each feature is a layer and the order in which they're stacked impacts what will be seen or hidden in its final visual form.
 
-If you want to specify your own stacking order, pass in the key-value pair `order=manual` anywhere in the request. The stacking will follow the order you pass in parameters, with the first parameter being at the bottom.
+To specify a custom stacking order, pass in the key-value pair <span id="order">`order=manual`</span> anywhere in the request. The stacking will follow the order the parameters are passed in, with the first parameter being at the bottom.
 
-**Example:** If you want...
+#### Example
+
+Features:
 
 - the eyes of [263a](https://unicode-table.com/en/263A) ☺️
 - the mouth of [2639](https://unicode-table.com/en/2639/) ☹️
 - the eyewear of [1f978](https://unicode-table.com/en/1F978/) 🥸
 - everything else of [1f47f](https://unicode-table.com/en/1F47F/) 👿
 
-Your request will look like this:
+Request:
 
 ```txt
 /v1/faces/1f47f?eyes=263a&mouth=2639&eyewear=1f978
 ```
 
-A base emoji is required, but you can exclude any feature by passing in the parameter as `false` or empty:
+A base emoji is required, but any feature can be excluded by passing in the parameter as `false` or empty.
 
 ```txt
 # Head empty, no thoughts
@@ -76,7 +78,7 @@ A base emoji is required, but you can exclude any feature by passing in the para
 /v1/faces/1f47f?head=false&mouth=2639
 ```
 
-If you want the eyes to be above the eyewear, add in `order=manual` and move eyes in front of eyewear:
+To move the eyes to be above the eyewear, add in `order=manual` and move `eyes` before `eyewear` in the request.
 
 ```txt
 /v1/faces/1f47f?mouth=2639&eyewear=1f978&eyes=263a&order=manual
@@ -100,7 +102,7 @@ If you want the eyes to be above the eyewear, add in `order=manual` and move eye
 
     File returned: `base-263a.png`
 
-  - If you want to name your download file, use the `filename` argument
+  - To specify a custom filename on download, use the <span id="filename">`filename` argument</span>
 
     Example Request:
 
@@ -130,6 +132,16 @@ File format refers to the type of image that is generated. Changing this argumen
 
 When querying for a PNG, a renderer is used. The default is imagemagick, but canvg is also available for browser usage returning content-type `text/html`.
 
+### Size
+
+Specify the size of the output in pixels with an integer (e.g. `size=500`). It will always be a square so height and width are equal.
+
+### Padding
+
+Add padding between the emoji and the edge of the output. Specify the number of pixels of the padding with an integer (e.g. `padding=100`).
+
+This reduces the size of the emoji, but not the `size` of the output. So in the case of `size=500&padding=100` the output will be 500px and the emoji 300px, since the padding is applied on all sides.
+
 ### Background Color
 
 Specify a background color with a string (e.g. `background_color=red`). Formats supported:
@@ -137,14 +149,6 @@ Specify a background color with a string (e.g. `background_color=red`). Formats 
 {{< block >}}
   {{< chart "background_color" "table,noFilter" >}}
 {{< /block >}}
-
-### Size
-
-Specify the size of the output in pixels with an integer (e.g. `size=500`). It will always be a square so height and width are equal.
-
-### Padding
-
-Add padding between the emoji and the edge of the output. Specify the number of pixels of the padding with an integer (e.g. `padding=100`). This reduces the size of the emoji, but not the `size` of the output.
 
 ## Example
 

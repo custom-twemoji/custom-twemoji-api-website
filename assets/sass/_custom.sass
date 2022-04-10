@@ -7,7 +7,7 @@
 nav ul ul
   margin-left: 1rem
 
-aside section section section section
+aside > section > section > section > section
   margin-left: 2.1rem
 
 // Table
@@ -32,6 +32,18 @@ a.button
 .pager_label
   code
     color: var(--light)
+
+
+// Code Hyperlinks
+table a
+  code
+    text-decoration: underline
+  code:hover
+    color: var(--hover-link) !important
+
+// Copy Text
+.link_yanked
+  right: -2.2rem
 
 // Loading Spinner
 .nav_header

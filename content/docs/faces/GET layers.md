@@ -1,6 +1,6 @@
 +++
 title = "GET `/faces/layers`"
-weight = 2
+weight = 3
 [arguments]
   fileLink = "content/docs/faces/csv/GET faces layers.csv"
   columnTitles = [
