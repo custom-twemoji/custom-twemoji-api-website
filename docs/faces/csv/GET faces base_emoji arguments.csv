@@ -7,12 +7,12 @@
 `eyewear`,❌,String,base emoji
 `headwear`,❌,String,base emoji
 `other`,❌,String,base emoji
-`order`,❌,String,"head,cheeks,mouth,nose,eyes,eyewear,headwear,other"
-`output`,❌,String,JSON
-`file_format`,❌,String,SVG
-`renderer`,❌,String,N/A due to SVG file format
-`size`,❌,Integer,N/A due to SVG file format
-`padding`,❌,Integer,0
-`background_color`,❌,String,transparent
-`filename`,❌,String,key-value pairs
+[`order`](#order),❌,String,"head,cheeks,mouth,nose,eyes,eyewear,headwear,other"
+[`output`](#output),❌,String,JSON
+[`file_format`](#file-format),❌,String,SVG
+[`renderer`](#renderer),❌,String,N/A due to SVG file format
+[`size`](#size),❌,Integer,N/A due to SVG file format
+[`padding`](#padding),❌,Integer,0
+[`background_color`](#background-color),❌,String,transparent
+[`filename`](#filename),❌,String,key-value pairs
 `twemoji_version`,❌,String,13.1.0
