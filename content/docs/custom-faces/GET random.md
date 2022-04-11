@@ -15,6 +15,8 @@ weight = 3
 
 Use this endpoint to randomly combine face Twemojis.
 
+[Live Demo](/random-face/)
+
 ## Arguments
 
 {{< block >}}
