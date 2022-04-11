@@ -1,9 +1,25 @@
----
-title: 🙂&nbsp;&nbsp;Faces Endpoints
-weight: 1
----
++++
+title = "🙂&nbsp;&nbsp;Faces Endpoints"
+weight = 1
+[arguments]
+  fileLink = "content/docs/faces/csv/index.csv"
+  columnTitles = [
+    "Name",
+    ["Required", "center"],
+    "Type",
+    "Default"
+  ]
+  baseChartOn = 2
+  title = "GET /faces arguments"
++++
 
 Faces are a subset of Twemojis supported by the API. To be supported, the Twemoji is broken down into discrete layers and each is manually labelled as a feature.
+
+## Arguments
+
+{{< block >}}
+  {{< chart "arguments" "table,noFilter" >}}
+{{< /block >}}
 
 ## Features
 
@@ -27,3 +43,63 @@ Layers may also be intentionally separated to create more pieces for mixing and 
 Because of these considerations, features may not be intuitive for every Twemoji you encounter and potentially not consistent when comparing between Twemojis.
 
 If you feel strongly about changing a label, feel free to [raise an issue](https://github.com/custom-twemoji/custom-twemoji-api/issues/new).
+
+## Indexing
+
+Faces can be described in terms of `layers` or `features`. The default is `layers`. To index by `features`, pass it in as as string to the `index_by` parameter.
+
+### Examples
+
+Request:
+
+```txt
+/v1/faces/1f47b
+```
+
+Response:
+
+```json
+{
+  ...
+  "data": {
+    "1f47b": {
+      "0": "head",
+      "1": "eyes",
+      "2": "eyes",
+      "3": "eyes",
+      "4": "mouth"
+    }
+  },
+  ...
+}
+```
+
+Request:
+
+```txt
+/v1/faces/1f47b?index_by=features
+```
+
+Response:
+
+```json
+{
+  ...
+  "data": {
+    "1f47b": {
+      "head": [
+        0
+      ],
+      "eyes": [
+        1,
+        2,
+        3
+      ],
+      "mouth": [
+        4
+      ]
+    }
+  },
+  ...
+}
+```

@@ -87,6 +87,7 @@ function downloadFaceAsPng(size) {
 }
 
 window.onload = function() {
+  // document.getElementById('custom-faces-icon').src = '/icons/custom-cat.svg'
   if (window.location.href.endsWith('/random-face/')) {
     getRandomFace();
   }

@@ -1,0 +1,8 @@
+`head`,❌,Float,1.0
+`cheeks`,❌,Float,0.5
+`mouth`,❌,Float,0.5
+`nose`,❌,Float,0.5
+`eyes`,❌,Float,0.5
+`eyewear`,❌,Float,0.5
+`headwear`,❌,Float,0.5
+`other`,❌,Float,0.5
