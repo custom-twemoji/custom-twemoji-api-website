@@ -1,5 +1,5 @@
 ---
-title: GET `/faces/emoji`
+title: GET `/faces/{emoji}`
 weight: 3
 ---
 
