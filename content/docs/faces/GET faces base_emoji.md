@@ -36,7 +36,7 @@ Use this endpoint to build a custom Twemoji using one as a base.
 ## Arguments
 
 {{< block >}}
-  {{< chart "arguments" "table,noFilter" >}}
+  {{< chart "arguments" "table" >}}
 {{< /block >}}
 
 ### Emoji Formats

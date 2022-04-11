@@ -31,7 +31,7 @@ function toggleSpinner(show) {
 
 let localApi = 'http://localhost';
 let productionApi = 'https://customtwemojiapi.com';
-let randomFaceEndpoint = '/v1/faces/random?file_format=svg&background_color=transparent';
+let randomFaceEndpoint = '/v1/custom_faces/random?file_format=svg&background_color=transparent';
 
 function getRandomFace() {
   toggleSpinner(true);
