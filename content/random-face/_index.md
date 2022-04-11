@@ -6,7 +6,7 @@ weight: 1
 {{< display-spinner >}}
 
 {{% center %}}
-Endpoint: <code>/v1/faces/random?output=image&file_format=svg&background_color=transparent</code>
+Endpoint: <code id="endpoint"></code>
 {{% /center %}}
 
 <br>
@@ -19,9 +19,9 @@ Endpoint: <code>/v1/faces/random?output=image&file_format=svg&background_color=t
 
 <br>
 
-<p style='text-align: center;'>
+{{% center %}}
   Output: <code id="output"></code>
-</p>
+{{% /center %}}
 
 {{% center %}}
 <p>

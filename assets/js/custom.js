@@ -35,6 +35,7 @@ let randomFaceEndpoint = '/v1/custom_faces/random?file_format=svg&background_col
 
 function getRandomFace() {
   toggleSpinner(true);
+  document.getElementById('endpoint').innerHTML = randomFaceEndpoint;
 
   let apiEndpoint = `${productionApi}${randomFaceEndpoint}`;
 
