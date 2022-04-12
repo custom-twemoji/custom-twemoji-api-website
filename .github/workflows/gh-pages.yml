@@ -24,7 +24,7 @@ jobs:
         run: hugo --minify
         
       - name: Send Percy snapshots
-        run: npm percy snapshot public/
+        run: npm install --save-dev @percy/cli && percy snapshot public/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
