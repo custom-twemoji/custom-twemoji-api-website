@@ -23,11 +23,8 @@ jobs:
       - name: Build
         run: hugo --minify
         
-      - name: Install Percy CLI
-        run: npm install @percy/cli --save-dev
-        
-      - name: Send Percy snapshots
-        run: percy exec -- public/
+      - name: Install Percy CLI and send snapshots
+        run: npm install @percy/cli --save-dev && percy exec -- public/
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
