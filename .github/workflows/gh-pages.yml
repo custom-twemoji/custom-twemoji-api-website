@@ -30,3 +30,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: customtwemoji.com
+      - name: Send Percy snapshots
+        run: npx percy snapshot public/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
