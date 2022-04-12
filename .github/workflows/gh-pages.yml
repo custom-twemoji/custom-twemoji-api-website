@@ -19,12 +19,9 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-
-      - name: Build
-        run: hugo --minify
         
       - name: Send Percy snapshots
-        run: npx percy exec --
+        run: npx percy exec -- hugo --minify
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
