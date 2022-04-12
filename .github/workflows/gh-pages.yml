@@ -24,7 +24,7 @@ jobs:
         run: hugo --minify
         
       - name: Send Percy snapshots
-        run: npx percy exec -- snapshot public/
+        run: npx percy exec --
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
