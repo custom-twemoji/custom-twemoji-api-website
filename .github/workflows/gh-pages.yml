@@ -22,6 +22,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
+        
+      - name: Send Percy snapshots
+        run: percy exec -- public/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -30,7 +35,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: customtwemoji.com
-      - name: Send Percy snapshots
-        run: npx percy snapshot public/
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
