@@ -2,7 +2,7 @@
 mainSections = ["posts"]
 
 # use the setting below to set multiple docs directories.
-# docSections = ["docs", "tutorials"]
+docSections = ["docs", "404"]
 
 # change to false to add sidebar to homepage
 uniqueHomePage = true
@@ -29,6 +29,8 @@ codeLineNumbers = false
 # in some situations you might wanna change that.
 # edit the line below
 # iconsPath = 'icons/'
+
+includePager = false
 
 # Site logo
 [logo]

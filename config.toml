@@ -8,9 +8,6 @@ enableRobotsTXT = true
 # if you prefer to load the theme normally
 # theme = "compose"
 
-[params]
-  includePager = false
-
 [module]
 [[module.imports]]
 path = "github.com/onweru/compose"

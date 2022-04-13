@@ -9,10 +9,15 @@
 <link rel="mask-icon" href='{{ absURL (printf "%ssafari-pinned-tab.svg" $iconsPath) }}'  color="#004750">
 <link rel="shortcut icon" href='{{ absURL (printf "%sfavicon.ico" $iconsPath) }}'>
 <meta name="msapplication-config" content='{{ absURL (printf "%sbrowserconfig.xml" $iconsPath) }}'>
+
 {{- $t := .Title }}
 {{- $s := site.Title }}
 {{- if in (lower $s) (lower $t) }}
   {{- $t = false }}
+{{- end }}
+
+{{- if eq (print $t) "404 Page not found" }}
+  {{ $t = title $t }}
 {{- end }}
 
 <title>{{ if and $t (ne (trim (lower $s) "") (trim (lower $t) "")) }}{{ replace $t "`" "" | markdownify | replaceRE "<{1}.+>{1}" "" | replaceRE "\u00a0" "" | replaceRE "\\p{So}+" "" }} | {{ end }}{{ $s }}</title>
