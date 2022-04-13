@@ -38,7 +38,7 @@ Learn more about supported faces via the [`/faces` endpoints](/docs/faces/).
   {{< chart "arguments" "table" >}}
 {{< /block >}}
 
-### Emoji Formats
+## Emoji Formats
 
 A number of different formats are supported for passing in emojis to promote ease of use.
 
@@ -46,13 +46,13 @@ A number of different formats are supported for passing in emojis to promote eas
 - case insensitive codepoint: `1f642` or `U+1f642`
 - number representation: `128578`
 
-### Facial Features
+## Facial Features
 
 Facial feature are passed in as keys with emojis as their values. Each feature is a layer and the order in which they're stacked impacts what will be seen or hidden in its final visual form.
 
 To specify a custom stacking order, pass in the key-value pair <span id="order">`order=manual`</span> anywhere in the request. The stacking will follow the order the parameters are passed in, with the first parameter being at the bottom.
 
-#### Example
+## Example
 
 Features:
 
@@ -83,7 +83,7 @@ To move the eyes to be above the eyewear, add in `order=manual` and move `eyes` 
 /v1/custom_faces/1f47f?mouth=2639&eyewear=1f978&eyes=263a&order=manual
 ```
 
-### Output
+## Output
 
 - JSON (`output=json`)
   - Main response listed under `data`
@@ -111,37 +111,37 @@ To move the eyes to be above the eyewear, add in `order=manual` and move `eyes` 
 
     File returned: `amazing_emoji.png`
 
-### File Format
+## File Format
 
 File format refers to the type of image that is generated. Changing this argument changes other argument defaults.
 
-#### SVG (`file_format=svg`)
+### SVG (`file_format=svg`)
 
 {{< block >}}
   {{< chart "file_format_svg" "table,noFilter" >}}
 {{< /block >}}
 
-#### PNG (`file_format=png`)
+### PNG (`file_format=png`)
 
 {{< block >}}
   {{< chart "file_format_png" "table,noFilter" >}}
 {{< /block >}}
 
-### Renderer
+## Renderer
 
 When querying for a PNG, a renderer is used. The default is imagemagick, but canvg is also available for browser usage returning content-type `text/html`.
 
-### Size
+## Size
 
 Specify the size of the output in pixels with an integer (e.g. `size=500`). It will always be a square so height and width are equal.
 
-### Padding
+## Padding
 
 Add padding between the emoji and the edge of the output. Specify the number of pixels of the padding with an integer (e.g. `padding=100`).
 
 This reduces the size of the emoji, but not the `size` of the output. So in the case of `size=500&padding=100` the output will be 500px and the emoji 300px, since the padding is applied on all sides.
 
-### Background Color
+## Background Color
 
 Specify a background color with a string (e.g. `background_color=red`). Formats supported:
 

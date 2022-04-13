@@ -9,7 +9,7 @@ weight: 1
 Endpoint: <code id="endpoint"></code>
 {{% /center %}}
 
-<br>
+<br><br>
 
 <div
   id="random-twemoji"
@@ -17,11 +17,13 @@ Endpoint: <code id="endpoint"></code>
   onload="loadRandomFace();"
 ></div>
 
-<br>
+<br><br>
 
 {{% center %}}
   Output: <code id="output"></code>
 {{% /center %}}
+
+<br>
 
 {{% center %}}
 <p>

@@ -1,6 +1,6 @@
 ---
 title: GET `/faces/random`
-weight: 3
+weight: 4
 ---
 
 Use this endpoint to get a random Twemoji that is supported as a face.

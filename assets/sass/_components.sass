@@ -169,6 +169,12 @@
   &_image
     margin: 0 auto
 
+.prev .pager_label
+  padding-left: 1.5rem
+
+.next .pager_label
+  padding-right: 1.5rem
+
 .pager
   display: flex
   justify-content: space-between
@@ -204,11 +210,16 @@
     justify-content: center
     &::before, &::after
       background-image: var(--nextIcon)
-      height: 0.8rem
-      width: 0.8rem
+      position: absolute
+      width: 1rem
+      height: 40%
       background-size: 100%
       background-repeat: no-repeat
       transform-origin: 50% 50%
+    &::before
+      left: 1rem
+    &::after
+      right: 1rem
 
   &_item
     display: flex

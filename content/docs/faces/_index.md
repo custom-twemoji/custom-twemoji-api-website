@@ -13,7 +13,7 @@ weight = 1
   title = "GET /faces arguments"
 +++
 
-Faces are a subset of Twemojis supported by the API. To be supported, the Twemoji is broken down into discrete layers and each is manually labelled as a feature.
+Faces are a subset of Twemojis specifically supported by the API. To be supported, the Twemoji is broken down into discrete layers and each manually labelled as a feature.
 
 ## Arguments
 
@@ -34,7 +34,7 @@ Faces are a subset of Twemojis supported by the API. To be supported, the Twemoj
 
 ## Labeling
 
-Deciding which feature to label a layer is subjective, especially with the inclusion of an `other` label. For example, a layer with dimples could be commonly classified as part of the cheeks or the mouth.
+Deciding which feature to label a layer is subjective, especially with the inclusion of an `other` feature. For example, a layer with dimples could be commonly classified as part of the cheeks or the mouth.
 
 It's also relevant to consider how the layer looks when combined with other Twemojis. To continue with the same example, if the layer with dimples is often hidden behind other `cheeks` layers when labeled as `mouth`, then it might be better to label it `cheeks` instead so it can be used more.
 
@@ -48,7 +48,7 @@ If you feel strongly about changing a label, feel free to [raise an issue](https
 
 Faces can be described in terms of `layers` or `features`. The default is `layers`. To index by `features`, pass it in as as string to the `index_by` parameter.
 
-### Examples
+### Layers
 
 Request:
 
@@ -73,6 +73,8 @@ Response:
   ...
 }
 ```
+
+### Features
 
 Request:
 
