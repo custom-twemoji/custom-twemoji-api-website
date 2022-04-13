@@ -30,7 +30,7 @@ codeLineNumbers = false
 # edit the line below
 # iconsPath = 'icons/'
 
-includePager = false
+pager = false
 
 # Site logo
 [logo]

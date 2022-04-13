@@ -3,7 +3,7 @@
   <main class="content">
     <h1>{{ .Title | markdownify }}</h1>
     {{- .Content }}
-    {{ if ne site.Params.includePager false }}
+    {{ if site.Params.pager | default true }}
       {{ partial "pager" . }}
     {{ end }}
   </main>
