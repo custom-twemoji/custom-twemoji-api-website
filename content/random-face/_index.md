@@ -6,7 +6,8 @@ weight: 1
 {{< display-spinner >}}
 
 {{% center %}}
-Endpoint: <code id="endpoint"></code>
+<b>Endpoint</b>
+<pre tabindex="0" class="chroma single_line"><code id="endpoint" class="language-txt" data-lang="txt"></code></pre>
 {{% /center %}}
 
 <br><br>
@@ -20,7 +21,8 @@ Endpoint: <code id="endpoint"></code>
 <br><br>
 
 {{% center %}}
-  Output: <code id="output"></code>
+<b>Output</b>
+<pre tabindex="0" class="chroma single_line"><code id="output" class="language-txt" data-lang="txt"></code></pre>
 {{% /center %}}
 
 <br>

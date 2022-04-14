@@ -21,6 +21,13 @@ function initializeSearch(index) {
     return minimumQueryLength;
   }
 
+  function cleanString(string) {
+    return string
+      .replace(/\&nbsp;/g, ' ')
+      .replace(/\&#34;/g, '"')
+      .replace(/`(.*)`/, '<code class="noClass">$1</code>');
+  }
+
   function searchResults(results=[], query="", passive = false) {
     let resultsFragment = new DocumentFragment();
     let showResults = elem('.search_results');
@@ -53,23 +60,19 @@ function initializeSearch(index) {
         if(passive) {
           pushClass(item, 'passive');
           let itemTitle = createEl('h3');
-          itemTitle.textContent =
-            result.title
-            .replace(/\&nbsp;/g, ' ')
-            .replace(/\&#34;/g, '"');
+          itemTitle.innerHTML = cleanString(result.title);
           item.appendChild(itemTitle);
 
           let itemDescription = createEl('p');
           // position of first search term instance
           let queryInstance = result.body.indexOf(query);
-          let queryResult = result.body
-            .substring(queryInstance, queryInstance + 200)
-            .replace(/\&nbsp;/g, ' ')
-            .replace(/\&#34;/g, '"');
+          let queryResult = cleanString(
+            result.body.substring(queryInstance, queryInstance + 200)
+          );
           itemDescription.textContent = `...${queryResult}...`;
           item.appendChild(itemDescription);
         } else {
-          item.textContent = result.title;
+          item.innerHTML = cleanString(result.title);
         }
         resultsFragment.appendChild(item);
       });
