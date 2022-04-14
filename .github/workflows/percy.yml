@@ -1,0 +1,21 @@
+name: Percy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: gh-pages
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+        
+      - name: Send Percy snapshots
+        run: npx @percy/cli snapshot public/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
