@@ -10,7 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -21,13 +22,8 @@ jobs:
           hugo-version: 'latest'
           extended: true
           
-      - name: Build
+      - name: Build with Hugo
         run: hugo --minify
-        
-      - name: Send Percy snapshots
-        run: npx @percy/cli snapshot public/
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
