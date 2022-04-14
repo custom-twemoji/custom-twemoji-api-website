@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: gh-pages
+          ref: gh-pages
         
       - name: Send Percy snapshots
         run: npx @percy/cli snapshot .
