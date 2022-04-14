@@ -44,6 +44,18 @@ Because of these considerations, features may not be intuitive for every Twemoji
 
 If you feel strongly about changing a label, feel free to [raise an issue](https://github.com/custom-twemoji/custom-twemoji-api/issues/new).
 
+## Filtering
+
+Pass in a comma-separated list to filter the output of either `layers` or `features`.
+
+```txt
+include_features=head,eyes
+```
+
+```txt
+include_layers=1,2,3
+```
+
 ## Indexing
 
 Faces can be described in terms of `layers` or `features`. The default is `layers`. To index by `features`, pass it in as as string to the `index_by` parameter.
