@@ -1,11 +1,6 @@
 name: Percy
 
 on:
-  push:
-    branches:
-      - '*'
-    paths-ignore:
-      - '.github/**'
   workflow_dispatch:
 
 jobs:
