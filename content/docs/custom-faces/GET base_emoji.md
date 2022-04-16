@@ -23,6 +23,41 @@ Use this endpoint to combine face Twemojis using one as a base.
 
 Other arguments are available to all [`/custom_faces` endpoints](/docs/custom-faces/).
 
+## Facial Features
+
+Facial feature are passed in as keys with comma separated [emojis](/docs/custom-faces/#emoji-formats) as their values. When multiple emojis are provided, the first is at the bottom. More information on this can be found in the [Stacking Order section](/docs/custom-faces/#stacking-order).
+
+### Building a Request
+
+Idea for a face:
+
+- the eyes of [1f644](https://unicode-table.com/en/1F644/) 🙄 and [263a](https://unicode-table.com/en/263A) ☺️
+- the mouth of [2639](https://unicode-table.com/en/2639/) ☹️
+- the eyewear of [1f978](https://unicode-table.com/en/1F978/) 🥸
+- everything else of [1f47f](https://unicode-table.com/en/1F47F/) 👿
+
+Request:
+
+```txt
+/v1/custom_faces/1f47f?eyes=1f644,263a&mouth=2639&eyewear=1f978
+```
+
+Any feature not specified will receive the feature from the `base_emoji`. To remove a `base_emoji` feature without replacing it from another emoji, pass in nothing or `false`.
+
+```txt
+# Head empty, no thoughts
+/v1/custom_faces/1f47f?head=&eyes=1f644,263a&mouth=2639&eyewear=1f978
+
+# Head false, headless horseman
+/v1/custom_faces/1f47f?head=false&eyes=1f644,263a&mouth=2639&eyewear=1f978
+```
+
+To move `eyes` **above** `eyewear`, pass in `order=manual` and move `eyes` **after** `eyewear`.
+
+```txt
+/v1/custom_faces/1f47f?head=false&mouth=2639&eyewear=1f978&eyes=1f644,263a&order=manual
+```
+
 ## Example
 
 Request:

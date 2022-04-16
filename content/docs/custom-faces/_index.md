@@ -46,42 +46,24 @@ A number of different formats are supported for passing in emojis to promote eas
 - case insensitive codepoint: `1f642` or `U+1f642`
 - number representation: `128578`
 
-## Facial Features
+## Stacking Order
 
-Facial feature are passed in as keys with emojis as their values. Each feature is a layer and the order in which they're stacked impacts what will be seen or hidden in its final visual form.
+Default order from bottom to top:
 
-To specify a custom stacking order, pass in the key-value pair <span id="order">`order=manual`</span> anywhere in the request. The stacking will follow the order the parameters are passed in, with the first parameter being at the bottom.
+1. head
+1. cheeks
+1. mouth
+1. nose
+1. eyes
+1. eyewear
+1. headwear
+1. other
 
-## Example
+To specify a custom stacking order, pass in the key-value pair `order=manual` anywhere in the request. The stacking will follow the order the parameters are passed in, with the first parameter being at the bottom.
 
-Features:
-
-- the eyes of [263a](https://unicode-table.com/en/263A) ☺️
-- the mouth of [2639](https://unicode-table.com/en/2639/) ☹️
-- the eyewear of [1f978](https://unicode-table.com/en/1F978/) 🥸
-- everything else of [1f47f](https://unicode-table.com/en/1F47F/) 👿
-
-Request:
-
-```txt
-/v1/custom_faces/1f47f?eyes=263a&mouth=2639&eyewear=1f978
-```
-
-A base emoji is required, but any feature can be excluded by passing in the parameter as `false` or empty.
-
-```txt
-# Head empty, no thoughts
-/v1/custom_faces/1f47f?head=&mouth=2639
-
-# Head false, headless horseman
-/v1/custom_faces/1f47f?head=false&mouth=2639
-```
-
-To move the eyes to be above the eyewear, add in `order=manual` and move `eyes` before `eyewear` in the request.
-
-```txt
-/v1/custom_faces/1f47f?mouth=2639&eyewear=1f978&eyes=263a&order=manual
-```
+{{< tip >}}
+left to right = bottom to top
+{{< /tip >}}
 
 ## Output
 

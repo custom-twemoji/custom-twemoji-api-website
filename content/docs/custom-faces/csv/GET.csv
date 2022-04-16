@@ -1,4 +1,4 @@
-[`order`](#order),❌,String,"head,cheeks,mouth,nose,eyes,eyewear,headwear,other"
+[`order`](#stacking-order),❌,String,"head,cheeks,mouth,nose,eyes,eyewear,headwear,other"
 [`output`](#output),❌,String,JSON
 [`file_format`](#file-format),❌,String,SVG
 [`renderer`](#renderer),❌,String,N/A due to SVG file format

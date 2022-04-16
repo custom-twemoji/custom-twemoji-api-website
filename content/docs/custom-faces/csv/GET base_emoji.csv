@@ -1,9 +1,9 @@
 `base_emoji`,✅,String ([emoji](/docs/custom-faces/#emoji-formats)),none
-`head`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`cheeks`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`mouth`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`nose`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`eyes`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`eyewear`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`headwear`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
-`other`,❌,String ([emoji](/docs/custom-faces/#emoji-formats)),base emoji
+`head`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`cheeks`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`mouth`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`nose`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`eyes`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`eyewear`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`headwear`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji
+`other`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),base emoji

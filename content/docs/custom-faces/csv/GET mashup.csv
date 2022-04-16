@@ -1,5 +1,5 @@
 [`amount`](#amount),❌,Integer,2
-`emojis`,❌,String (comma separated [emojis](/docs/custom-faces/#emoji-formats)),none
+`emojis`,❌,Strings (comma separated [emojis](/docs/custom-faces/#emoji-formats)),none
 [`use_every_feature`](#use-every-feature),❌,Boolean,false
 `head`,❌,Float,1.0
 `cheeks`,❌,Float,0.5
