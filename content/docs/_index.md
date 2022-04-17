@@ -9,6 +9,8 @@ Twemojis are retrieved directly from the [Twemoji GitHub repository](https://git
 
 Versions supported:
 
+- `14.0.2`
+- `14.0.1`
 - `14.0.0`
 - `13.0.1`
 - `13.0.0`

@@ -52,7 +52,7 @@ Case: `use_every_feature=false`
 
 Specify the likelihood of each feature appearing in the output:
 
-- `1.0` guarantees it will be present
+- `1.0` means it will be present if any emoji being mashed up has the feature
 - `0.0` guarantees it will not be present
 
 ## Example
