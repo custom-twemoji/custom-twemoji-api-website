@@ -12,7 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: Checkout original branch
         uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
@@ -26,8 +26,21 @@ jobs:
 
       - name: Build with Hugo
         run: hugo --minify
+        
+      - name: Deploy to test branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages-feature-branch-test
+          publish_dir: ./public
+          cname: customtwemoji.com
+
+      - name: Checkout test branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages-feature-branch-test
 
       - name: Send Percy snapshots
-        run: npx @percy/cli snapshot public/
+        run: npx @percy/cli snapshot .
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
