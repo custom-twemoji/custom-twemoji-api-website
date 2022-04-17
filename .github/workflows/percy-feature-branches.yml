@@ -2,8 +2,8 @@ name: Percy on Feature Branches
 
 on:
   push:
-    branches:
-      - '!main'
+    branches-ignore:
+      - main
     paths-ignore:
       - '.github/**'
   workflow_dispatch:
@@ -23,10 +23,10 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-          
+
       - name: Build with Hugo
         run: hugo --minify
-          
+
       - name: Send Percy snapshots
         run: npx @percy/cli snapshot public/
         env:
