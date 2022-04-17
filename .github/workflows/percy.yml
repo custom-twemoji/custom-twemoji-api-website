@@ -1,4 +1,4 @@
-name: Percy
+name: Percy on GitHub Pages
 
 on:
   workflow_dispatch:
