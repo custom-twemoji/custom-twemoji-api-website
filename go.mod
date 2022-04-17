@@ -1,6 +1,6 @@
 module github.com/custom-twemoji/custom-twemoji-api-website
 
-go 1.15
+go 1.17
 
 require (
 	github.com/jakejarvis/hugo-mod-twemoji v0.3.0 // indirect
