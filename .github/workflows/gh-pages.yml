@@ -35,7 +35,7 @@ jobs:
           publish_dir: ./public
           cname: customtwemoji.com
 
-      # - name: Send Percy snapshots
-      #   run: npx @percy/cli snapshot public/
-      #   env:
-      #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      - name: Send Percy snapshots
+        run: npx @percy/cli snapshot public/
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
