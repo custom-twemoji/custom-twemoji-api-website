@@ -1,4 +1,6 @@
 [`index_by`](#indexing),❌,String,layers
 [`include_features`](#filtering),❌,Strings (comma separated),all
 [`include_layers`](#filtering),❌,Integers (comma separated),all
+`include_glyphs`,❌,Boolean,true
+`include_empty_layers`,❌,Boolean,false
 [`twemoji_version`](/docs/#twemoji-versions),❌,String,14.0.0
