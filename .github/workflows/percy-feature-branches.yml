@@ -27,6 +27,14 @@ jobs:
       - name: Build with Hugo
         run: hugo --minify
 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages-feature-branch
+          cname: customtwemoji.com
+
       - name: Send Percy snapshots
         run: npx @percy/cli snapshot public/
         env:
