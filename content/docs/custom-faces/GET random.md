@@ -13,10 +13,10 @@ weight = 3
   title = "GET /custom_faces/random arguments"
 +++
 
-Use this endpoint to randomly combine face Twemojis.
+Use this endpoint to randomly combine face Twemojis. This differs from `/mashup` in that it is feature-first and offers less control over emoji selection.
 
 {{< tip >}}
-Check out the [live demo](/random-face/)!
+Check out the [live demo](/live-demos/random-face/)
 {{< /tip >}}
 
 ## Arguments

@@ -13,7 +13,11 @@ weight = 3
   title = "GET /custom_faces/mashup arguments"
 +++
 
-Use this endpoint to combine two or more face Twemojis.
+Use this endpoint to combine two or more face Twemojis. This differs from `/random` in that it is emoji-first, allowing more control over emoji selection.
+
+{{< tip >}}
+Check out the [live demo](/live-demos/mashup-face/)
+{{< /tip >}}
 
 ## Arguments
 

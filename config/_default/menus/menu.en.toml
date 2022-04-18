@@ -6,6 +6,6 @@
   url = "docs/"
 
 [[main]]
-  name = "📺&nbsp;&nbsp;Live Demo"
+  name = "📺&nbsp;&nbsp;Live Demos"
   weight = 2
-  url = "live-demo/"
+  url = "live-demos/"

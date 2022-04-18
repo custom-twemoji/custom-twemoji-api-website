@@ -1,19 +1,22 @@
 ---
-title: Random Custom Face
+title: Mashup Face
 weight: 1
 ---
 
 {{< display-spinner >}}
 
+<br>
+
 {{% center %}}
-<b>Endpoint</b>
+<h2>Endpoint</h2>
 <pre tabindex="0" class="chroma single_line"><code id="endpoint" class="language-txt" data-lang="txt"></code></pre>
+<a href="/docs/custom-faces/get-mashup/"><small>Docs</small></a>
 {{% /center %}}
 
 <br><br>
 
 <div
-  id="random-twemoji"
+  id="mashup-twemoji"
   style="width:100%; height:500px"
   onload="loadRandomFace();"
 ></div>
@@ -22,8 +25,8 @@ weight: 1
 
 {{% center %}}
 <b>Output</b>
-<p id="random-custom-face-output-description"></p>
-<pre tabindex="0" class="chroma single_line"><code id="random-custom-face-output-url" class="language-txt" data-lang="txt"></code></pre>
+<p id="mashup-custom-face-output-description"></p>
+<pre tabindex="0" class="chroma single_line"><code id="mashup-custom-face-output-url" class="language-txt" data-lang="txt"></code></pre>
 {{% /center %}}
 
 <br>
@@ -34,7 +37,7 @@ weight: 1
     href=""
     class="button secondary"
     onClick="
-      getRandomFace();
+      getMashupFace();
       return false;
     ">
     🔄&nbsp;&nbsp;Generate Another
@@ -78,6 +81,11 @@ or download this one
 {{% /center %}}
 
 <script>
+  let localApi = 'http://localhost';
+  let productionApi = 'https://customtwemojiapi.com';
+  let mashupFaceEndpoint =
+    '/v1/custom_faces/mashup?file_format=svg&background_color=transparent&use_every_feature=true';
+
   // Source: https://stackoverflow.com/a/35970894/5988852
   var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -109,15 +117,11 @@ or download this one
     document.getElementById('cover-spinner').style.display = display;
   }
 
-  let localApi = 'http://localhost';
-  let productionApi = 'https://customtwemojiapi.com';
-  let randomFaceEndpoint = '/v1/custom_faces/random?file_format=svg&background_color=transparent';
-
-  function getRandomFace() {
+  function getMashupFace() {
     toggleSpinner(true);
-    document.getElementById('endpoint').innerHTML = randomFaceEndpoint;
+    document.getElementById('endpoint').innerHTML = mashupFaceEndpoint;
 
-    let apiEndpoint = `${productionApi}${randomFaceEndpoint}`;
+    let apiEndpoint = `${productionApi}${mashupFaceEndpoint}`;
 
     getJSON(
       apiEndpoint,
@@ -125,17 +129,58 @@ or download this one
         if (error !== null) {
           console.error(`Something went wrong: ${error}`);
         } else {
-          let svgDiv = document.getElementById('random-twemoji');
+          let svgDiv = document.getElementById('mashup-twemoji');
           if (svgDiv !== null) svgDiv.innerHTML = response.data.output;
 
-          let outputUrl = document.getElementById('random-custom-face-output-url');
+          let outputUrl = document.getElementById('mashup-custom-face-output-url');
           if (outputUrl !== null) {
             outputUrl.innerHTML = response.links.self.replace(productionApi, '');
           }
 
-          let outputDescription = document.getElementById('random-custom-face-output-description');
+          let outputDescription = document.getElementById('mashup-custom-face-output-description');
           if (outputDescription !== null) {
-            outputDescription.innerText = response.data.description;
+            let faces = {};
+
+            response.data.description.forEach(descriptor => {
+              const feature = descriptor.feature;
+              const codepoint = descriptor.codepoint;
+              const glyph = descriptor.glyph;
+              const image = `<img draggable="false" class="emoji" alt="${glyph}" src="/twemoji/svg/${codepoint}.svg">`
+
+              let face = faces[codepoint];
+              if (faces[codepoint] == null) {
+                faces[codepoint] = {
+                  features: [feature],
+                  image: image,
+                };
+              } else {
+                faces[codepoint].features.push(feature);
+              }
+            });
+
+            // console.log('faces');
+            // console.dir(faces);
+
+            let description = '';
+
+            Object.values(faces).forEach(descriptor => {
+              let features = descriptor.features;
+              let lastFeature = '';
+
+              const separator = descriptor.features.length === 2 ? ' & ' : ', ';
+              if (features.length > 2) lastFeature = `, and ${features.pop()}`;
+
+              features = descriptor.features.join(separator);
+              const image = descriptor.image;
+
+              description +=
+                `${description === '' ? '' : ' + '}${features}${lastFeature} from ${image}`;
+            });
+
+            // console.log('description');
+            // console.dir(description);
+
+            outputDescription.innerHTML = description;
           }
 
           toggleSpinner(false);
@@ -147,7 +192,7 @@ or download this one
   function downloadFaceAsPng(size) {
     toggleSpinner(true);
 
-    let outputUrl = document.getElementById('random-custom-face-output-url');
+    let outputUrl = document.getElementById('mashup-custom-face-output-url');
     if (outputUrl === null) {
       console.error('Output is empty');
       return;
@@ -199,6 +244,6 @@ or download this one
   }
 
   window.onload = function() {
-    getRandomFace();
+    getMashupFace();
   }
 </script>
