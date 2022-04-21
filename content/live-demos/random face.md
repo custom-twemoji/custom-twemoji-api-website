@@ -168,7 +168,7 @@ or download this one
       return;
     }
 
-    let endpointUrl = output.innerText;
+    let endpointUrl = outputUrl.innerText;
     if (endpointUrl === null || endpointUrl === '') {
       console.error('endpointUrl is empty');
       return;

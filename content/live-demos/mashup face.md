@@ -158,9 +158,6 @@ or download this one
               }
             });
 
-            // console.log('faces');
-            // console.dir(faces);
-
             let description = '';
 
             Object.values(faces).forEach(descriptor => {
@@ -176,9 +173,6 @@ or download this one
               description +=
                 `${description === '' ? '' : ' + '}${features}${lastFeature} from ${image}`;
             });
-
-            // console.log('description');
-            // console.dir(description);
 
             outputDescription.innerHTML = description;
           }
@@ -198,7 +192,7 @@ or download this one
       return;
     }
 
-    let endpointUrl = output.innerText;
+    let endpointUrl = outputUrl.innerText;
     if (endpointUrl === null || endpointUrl === '') {
       console.error('endpointUrl is empty');
       return;
