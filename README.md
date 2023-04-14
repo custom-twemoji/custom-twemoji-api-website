@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  🚧 WIP - Beta 🚧
+  🚧 Beta 🚧
 </p>
 
 [![GitHub Pages](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml)
