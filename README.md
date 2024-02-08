@@ -15,4 +15,4 @@
 [![GitHub Pages](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/custom-twemoji/custom-twemoji-api-website/actions/workflows/gh-pages.yml)
 ![License](https://img.shields.io/github/license/custom-twemoji/custom-twemoji-api-website)
 
-Not affiliated with Twitter Inc. or any of their affiliations
+Not affiliated with Twitter Inc., X Corp., or any of their affiliations
