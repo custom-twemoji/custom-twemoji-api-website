@@ -9,9 +9,9 @@ weight: 1
 
 ## Twemoji Versions
 
-Twemojis are retrieved directly from the [Twemoji GitHub repository](https://github.com/twitter/twemoji) based on a particular [release version](https://github.com/twitter/twemoji/releases).
+Twemojis are retrieved directly from [jdecked's fork](https://github.com/jdecked/twemoji#readme) of the original [Twemoji GitHub repository](https://github.com/twitter/twemoji) based on a particular [tag](https://github.com/jdecked/twemoji/tags).
 
-Versions supported:
+Versions currently supported:
 
 - `14.0.2`
 - `14.0.1`
