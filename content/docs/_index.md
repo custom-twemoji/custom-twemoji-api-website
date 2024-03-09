@@ -13,6 +13,11 @@ Twemojis are retrieved directly from [jdecked's fork](https://github.com/jdecked
 
 Versions currently supported:
 
+- `15.0.3`
+- `15.0.2`
+- `14.1.2`
+- `14.1.1`
+- `14.1.0`
 - `14.0.2`
 - `14.0.1`
 - `14.0.0`
