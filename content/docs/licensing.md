@@ -7,7 +7,7 @@ weight: 3
 
 - Code licensed under the [MIT License](https://github.com/custom-twemoji/custom-twemoji-api/blob/main/LICENSE)
 - Graphics licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- Twemoji licensing can be found on [Twitter](https://twemoji.twitter.com)
+- Twemoji licensing can be found on [GitHub](https://github.com/twitter/twemoji?tab=readme-ov-file#license)
 
 Not affiliated with Twitter Inc., X Corp., or any of their affiliations
 
@@ -15,6 +15,6 @@ Not affiliated with Twitter Inc., X Corp., or any of their affiliations
 
 - Theme: [Compose](https://github.com/onweru/compose/)
 - Code licensed under the [Apache 2.0](https://github.com/custom-twemoji/custom-twemoji-api-website/blob/main/LICENSE)
-- Twemoji licensing can be found on [Twitter](https://twemoji.twitter.com)
+- Twemoji licensing can be found on [GitHub](https://github.com/twitter/twemoji?tab=readme-ov-file#license)
 
 Not affiliated with Twitter Inc., X Corp., or any of their affiliations

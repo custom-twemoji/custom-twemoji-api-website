@@ -15,11 +15,11 @@ title = "Projects"
 
 # Custom Twemoji API
 
-Learn how to build your own [Twemojis](https://twemoji.twitter.com/)
+Learn how to build your own [Twemojis](https://github.com/twitter/twemoji#twitter-emoji-twemoji-)
 
 🚧 Beta 🚧
 
-<p class="button_grid" style="text-align: center; display: inline-grid;">{{< button "docs" "Read the Docs" >}}{{< button "https://github.com/custom-twemoji/custom-twemoji-api" "Go to the API" >}}</p>
+<p class="button_grid" style="text-align: center; display: inline-grid;">{{< button "docs" "Read the Docs" >}}{{< button "https://github.com/custom-twemoji/custom-twemoji-api" "View the API" >}}</p>
 
 {{% /center %}}
 
