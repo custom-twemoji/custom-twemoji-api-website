@@ -3,4 +3,4 @@
 [`include_layers`](#filtering),❌,Integers (comma separated),all
 `include_glyphs`,❌,Boolean,true
 `include_empty_layers`,❌,Boolean,false
-[`twemoji_version`](/docs/#twemoji-versions),❌,String,14.0.0
+[`twemoji_version`](/docs/#twemoji-versions),❌,String,latest

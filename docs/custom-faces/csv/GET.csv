@@ -6,4 +6,4 @@
 [`padding`](#padding),❌,Integer,0
 [`background_color`](#background-color),❌,String,transparent
 [`filename`](#filename),❌,String,key-value pairs
-[`twemoji_version`](/docs/#twemoji-versions),❌,String,14.0.0
+[`twemoji_version`](/docs/#twemoji-versions),❌,String,latest
