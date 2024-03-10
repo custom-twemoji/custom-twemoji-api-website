@@ -18,7 +18,6 @@ weight: 1
 <div
   id="random-twemoji"
   style="width:100%; height:500px"
-  onload="loadRandomFace();"
 ></div>
 
 <br><br>
