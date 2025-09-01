@@ -15,7 +15,7 @@ title = "Projects"
 
 # Custom Twemoji API
 
-Learn how to build your own [Twemojis](https://github.com/twitter/twemoji#twitter-emoji-twemoji-)
+Learn how to build your own [Twemojis](https://github.com/jdecked/twemoji#readme)
 
 🚧 Beta 🚧
 
