@@ -19,6 +19,8 @@ Learn how to build your own [Twemojis](https://github.com/jdecked/twemoji#readme
 
 🚧 Beta 🚧
 
+Elon Musk sucks. Text "MUSK" to <code>51905</code> to join the Tesla Takedown movement.
+
 <p class="button_grid" style="text-align: center; display: inline-grid;">{{< button "docs" "Read the Docs" >}}{{< button "https://github.com/custom-twemoji/custom-twemoji-api" "View the API" >}}</p>
 
 {{% /center %}}
